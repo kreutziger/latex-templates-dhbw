@@ -1,4 +1,4 @@
-.aux
-.log
-.pdf
+*.aux
+*.log
+*.pdf
 .DS_Store
