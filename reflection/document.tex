@@ -1,0 +1,55 @@
+%\batchmode
+
+\documentclass[
+	pdftex,
+	oneside,
+	12pt,
+	parskip=half,
+]{scrreprt}
+
+\usepackage[activate]{microtype}
+\usepackage{graphicx}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[margin=2.5cm,foot=1cm]{geometry}
+
+\input{content/vars}
+
+%\scrollmode
+
+\begin{document}
+
+    \begin{titlepage}
+        \includegraphics[width=\textwidth]{../header.png}
+        \begin{spacing}{1}
+            \begin{center}
+                \vspace*{20mm}	\textbf{Reflexionsbericht}\\
+                \vspace*{20mm}	für das Seminar\\
+                \vspace*{3mm}	{\large \varmodule}\\
+                \vspace*{20mm}	am Center for Advanced Studies Heilbronn\\
+                                der Dualen Hochschule Baden-Württemberg\\
+                \vspace*{12mm}	von\\
+                \vspace*{3mm}	Ernesto Elsäßer\\
+                \vspace*{12mm}	\today{}\\
+            \end{center}
+        \end{spacing}
+        \vfill
+        \begin{spacing}{1.2}
+            \begin{tabular}{ p{.4\textwidth} l }
+                \textbf{Kurs}                     &  \varcourse\\
+                \textbf{Semester}                 &  \varsemester\\
+                \textbf{Lehrende}                 &  \varlecturers\\
+                \textbf{Matrikelnummer}           &  2016242\\
+                \textbf{Unternehmen}              &  moovel Group GmbH, Stuttgart\\
+            \end{tabular}
+        \end{spacing}
+    \end{titlepage}
+
+	\newpage
+
+	\pagestyle{empty}
+
+    \input{content/body}
+
+	\clearpage
+	
+\end{document}

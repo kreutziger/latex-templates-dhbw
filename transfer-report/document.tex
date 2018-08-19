@@ -5,9 +5,6 @@
 	oneside,
 	12pt,
 	parskip=half,
-	% DIV=calc,
-	% BCOR=8mm,
-	% abstracton,
 ]{scrreprt}
 
 \usepackage[activate]{microtype}
@@ -25,27 +22,34 @@
 \begin{document}
 
     \begin{titlepage}
-        \includegraphics[width=\textwidth]{header.png}
+        \includegraphics[width=\textwidth]{../header.png}
         \begin{spacing}{1}
             \begin{center}
-                \vspace*{20mm}	\textbf{\vartitle}\\
-                \vspace*{20mm}	für das Seminar\\
+                \vspace*{20mm}	\textbf{Transferbericht}\\
+                \vspace*{10mm}	für das Modul\\
                 \vspace*{3mm}	{\large \varmodule}\\
-                \vspace*{20mm}	am Center for Advanced Studies Heilbronn\\
+                \vspace*{10mm}	am Center for Advanced Studies Heilbronn\\
                                 der Dualen Hochschule Baden-Württemberg\\
-                \vspace*{12mm}	von\\
-                \vspace*{3mm}	Ernesto Elsäßer\\
-                \vspace*{12mm}	\today{}\\
+                \vspace*{30mm}  \textbf{Mein Seminarprogramm}\\
+                \begin{small}
+                \begin{tabular}{ r l l }
+                    \\
+                       & Seminar    & Dozent\\
+                    \\
+                    1. & \varsemi   & \varlecti\\
+                    2. & \varsemii  & \varlectii\\
+                    3. & \varsemiii & \varlectiii\\
+                \end{tabular}
+                \end{small}
             \end{center}
         \end{spacing}
         \vfill
         \begin{spacing}{1.2}
             \begin{tabular}{ p{.4\textwidth} l }
-                \textbf{Kurs}                     &  \varcourse\\
-                \textbf{Semester}                 &  \varsemester\\
-                \textbf{Lehrende}                 &  \varlecturers\\
-                \textbf{Matrikelnummer}           &  2016242\\
-                \textbf{Unternehmen}              &  moovel Group GmbH, Stuttgart\\
+                \textbf{Name}           & Ernesto Elsäßer\\
+                \textbf{Matrikelnummer} & 2016242\\
+                \textbf{Unternehmen}    & moovel Group GmbH, Stuttgart\\
+                \textbf{Abgabedatum}    & \today{}\\
             \end{tabular}
         \end{spacing}
     \end{titlepage}
