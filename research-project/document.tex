@@ -11,7 +11,6 @@
 \usepackage{graphicx}
 \usepackage[onehalfspacing]{setspace}
 \usepackage[margin=2.5cm,foot=1cm]{geometry}
-%\usepackage{makeidx} % table of contents
 
 \input{config}
 
@@ -62,7 +61,25 @@
 	\newpage
 	\pagestyle{plain}
 
+    \vspace*{5cm} 
+    \begin{center}
+        \textbf{Abstract}
+    \end{center}
+
+    \input{abstract}
+
+    \newpage
+
+    \tableofcontents
+
+    \newpage
+
     \input{body}
+
+    \newpage
+
+    \bibliographystyle{apalike}
+    \bibliography{literature}
 
 	\clearpage
 	
