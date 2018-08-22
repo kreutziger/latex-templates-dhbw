@@ -1,4 +1,5 @@
 #!/bin/sh
-cd "$(dirname "$0")/$1"
+cd "$(dirname "$0")"
 rm -f document.aux
-pdflatex -halt-on-error document
+cd $1
+pdflatex -halt-on-error -output-directory .. document
