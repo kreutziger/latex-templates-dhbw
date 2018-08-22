@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile reflection",
+            "type": "shell",
+            "command": "./compile.sh reflection",
+            "problemMatcher": []
+        },
+        {
+            "label": "compile transfer-report",
+            "type": "shell",
+            "command": "./compile.sh transfer-report",
+            "problemMatcher": []
+        },
+        {
+            "label": "compile research-project",
+            "type": "shell",
+            "command": "./compile.sh research-project",
+            "problemMatcher": []
+        }
+    ]
+}
