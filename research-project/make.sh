@@ -1,10 +1,5 @@
 #!/bin/sh
-pdflatex document
+pdflatex -halt-on-error document
 bibtex document
-pdflatex document
-pdflatex document
-
-rm document.aux
-rm document.bbl
-rm document.blg
-rm document.log
+pdflatex -halt-on-error document
+pdflatex -halt-on-error document
