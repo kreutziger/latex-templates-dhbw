@@ -2,21 +2,21 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "compile reflection",
+            "label": "make reflection",
             "type": "shell",
-            "command": "./compile.sh reflection",
+            "command": "./make.sh reflection",
             "problemMatcher": []
         },
         {
-            "label": "compile transfer-report",
+            "label": "make transfer-report",
             "type": "shell",
-            "command": "./compile.sh transfer-report",
+            "command": "./make.sh transfer-report",
             "problemMatcher": []
         },
         {
-            "label": "compile research-project",
+            "label": "make research-project",
             "type": "shell",
-            "command": "./compile.sh research-project",
+            "command": "./make.sh research-project",
             "problemMatcher": []
         }
     ]
