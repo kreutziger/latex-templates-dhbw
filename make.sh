@@ -23,5 +23,4 @@ mv document.pdf $CONTENTDIR/$TEMPLATE.pdf
 rm document.aux
 rm document.bbl
 rm document.blg
-rm document.log
 rm document.toc
