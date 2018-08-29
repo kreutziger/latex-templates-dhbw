@@ -16,13 +16,17 @@ TEMPLATE=$1
 export TEXINPUTS="$CONTENTDIR:$TEXINPUTS"
 export BIBINPUTS="$CONTENTDIR:$BIBINPUTS"
 
+echo "Content directory: $CONTENTDIR"
+
 cd $TEMPLATE
 ./make.sh
-mv document.pdf $CONTENTDIR/$TEMPLATE.pdf
+if [ -f document.pdf ]; then
+    mv document.pdf "$CONTENTDIR/$TEMPLATE.pdf"
+fi
 
 # cleanup
-rm document.aux
-rm document.bbl
-rm document.blg
-rm document.toc
-rm document.log
+rm -f document.aux
+rm -f document.bbl
+rm -f document.blg
+rm -f document.toc
+rm -f document.log
