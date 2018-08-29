@@ -1,2 +1,2 @@
 #!/bin/sh
-pdflatex -halt-on-error document
+pdflatex -interaction nonstopmode document

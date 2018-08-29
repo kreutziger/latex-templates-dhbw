@@ -1,5 +1,5 @@
 #!/bin/sh
-pdflatex -halt-on-error ./document
-bibtex ./document
-pdflatex -halt-on-error ./document
-pdflatex -halt-on-error ./document
+pdflatex -interaction nonstopmode document
+bibtex document
+pdflatex -interaction nonstopmode document
+pdflatex -interaction nonstopmode document
