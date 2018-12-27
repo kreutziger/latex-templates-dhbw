@@ -30,3 +30,4 @@ rm -f document.bbl
 rm -f document.blg
 rm -f document.toc
 rm -f document.log
+rm -f document.out
