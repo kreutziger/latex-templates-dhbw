@@ -1,0 +1,71 @@
+\documentclass[
+	pdftex,
+	oneside,
+	12pt,
+	parskip=half,
+]{scrreprt}
+\setlength{\skip\footins}{5mm}
+
+\input{../packages}
+
+\input{config}
+
+\begin{document}
+
+    \begin{titlepage}
+        \includegraphics[width=\textwidth]{../header.png}
+        \vspace*{3cm}
+        \begin{center}
+            \begin{minipage}{.7\textwidth}
+                \centering
+                \textbf{\vartitle}\\[2cm]
+                \textit{\LARGE Programmentwurf}\\[2cm]
+                für das Modul\\[3mm]
+                {\large \varmodule}\\[2cm]
+                am Center for Advanced Studies Heilbronn\\
+                der Dualen Hochschule Baden-Württemberg\\
+            \end{minipage}
+        \end{center}
+        \vfill
+        \begin{spacing}{1.2}
+            \begin{tabular}{ p{.4\textwidth} l }
+                \textbf{Name}           & Ernesto Elsäßer\\
+                \textbf{Matrikelnummer} & 2016242\\
+                \textbf{Unternehmen}    & moovel Group GmbH, Stuttgart\\
+                \textbf{Gutachter}      & \varsupervisor\\
+                \textbf{Abgabedatum}    & \today{}\\
+            \end{tabular}
+        \end{spacing}
+    \end{titlepage}
+
+	\newpage
+	\pagestyle{empty}
+
+    \vspace*{5cm} 
+    \begin{center}
+        \textbf{Erklärung}
+    \end{center}
+
+    Ich habe die vorliegende Arbeit selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel verwendet.\\[1cm]
+
+    \begin{tabular}{ p{3cm}p{3cm}p{1cm}p{5cm} }
+        \hrulefill & \hrulefill & & \hrulefill\\
+        Ort & Datum & & Unterschrift\\
+    \end{tabular}
+
+    \newpage
+
+    \tableofcontents
+
+    \newpage
+
+    \input{body}
+
+    \newpage
+
+    \bibliographystyle{apalike}
+    \bibliography{literature}
+
+	\clearpage
+	
+\end{document}
