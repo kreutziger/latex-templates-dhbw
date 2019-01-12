@@ -1,5 +1,5 @@
 #!/bin/sh
-pdflatex -interaction nonstopmode document
+xelatex -interaction batchmode document
 bibtex document
-pdflatex -interaction nonstopmode document
-pdflatex -interaction nonstopmode document
+xelatex -interaction batchmode document
+xelatex -interaction batchmode document

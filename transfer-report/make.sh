@@ -1,2 +1,2 @@
 #!/bin/sh
-pdflatex -interaction nonstopmode document
+xelatex -interaction batchmode document
