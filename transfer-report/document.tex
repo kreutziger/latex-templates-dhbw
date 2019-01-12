@@ -1,55 +1,50 @@
-\documentclass[
-	pdftex,
-	oneside,
-	12pt,
-	parskip=half,
-]{scrreprt}
-
+\documentclass[oneside,12pt]{report}
 \input{../packages}
-
 \input{config}
 
 \begin{document}
 
-    \begin{titlepage}
-        \includegraphics[width=\textwidth]{../header.png}
-        \begin{spacing}{1}
-            \begin{center}
-                \vspace*{20mm}	\textbf{Transferbericht}\\
-                \vspace*{10mm}	für das Modul\\
-                \vspace*{3mm}	{\large \varmodule}\\
-                \vspace*{10mm}	am Center for Advanced Studies Heilbronn\\
-                                der Dualen Hochschule Baden-Württemberg\\
-                \vspace*{30mm}  \textbf{Mein Seminarprogramm}\\
-                \begin{small}
-                \begin{tabular}{ r l l }
-                    \\
-                       & Seminar    & Dozent(en)\\
-                    \\
-                    1. & \varsemi   & \varlecti\\
-                    2. & \varsemii  & \varlectii\\
-                    3. & \varsemiii & \varlectiii\\
-                \end{tabular}
-                \end{small}
-            \end{center}
-        \end{spacing}
-        \vfill
-        \begin{spacing}{1.2}
-            \begin{tabular}{ p{.4\textwidth} l }
-                \textbf{Name}           & Ernesto Elsäßer\\
-                \textbf{Matrikelnummer} & 2016242\\
-                \textbf{Unternehmen}    & moovel Group GmbH, Stuttgart\\
-                \textbf{Abgabedatum}    & \today{}\\
-            \end{tabular}
-        \end{spacing}
-    \end{titlepage}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\includegraphics[width=\textwidth]{../header.png}
+\begin{spacing}{1}
+    \begin{center}
+        \vspace*{20mm}	\textbf{Transferbericht}\\
+        \vspace*{10mm}	für das Modul\\
+        \vspace*{3mm}	{\large \varmodule}\\
+        \vspace*{10mm}	am Center for Advanced Studies Heilbronn\\
+                        der Dualen Hochschule Baden-Württemberg\\
+        \vspace*{30mm}  \textbf{Mein Seminarprogramm}\\
+        \begin{small}
+        \begin{tabular}{ r l l }
+            \\
+                & Seminar    & Dozent(en)\\
+            \\
+            1. & \varsemi   & \varlecti\\
+            2. & \varsemii  & \varlectii\\
+            3. & \varsemiii & \varlectiii\\
+        \end{tabular}
+        \end{small}
+    \end{center}
+\end{spacing}
+\vfill
+\begin{spacing}{1.2}
+    \begin{tabular}{ p{.4\textwidth} l }
+        \textbf{Name}           & Ernesto Elsäßer\\
+        \textbf{Matrikelnummer} & 2016242\\
+        \textbf{Unternehmen}    & moovel Group GmbH, Stuttgart\\
+        \textbf{Abgabedatum}    & \today{}\\
+    \end{tabular}
+\end{spacing}
+\end{titlepage}
 
-	\newpage
+\newpage
+\hypersetup{pageanchor=true}
 
-	\pagestyle{empty}
+\pagestyle{empty}
 
-    \input{body}
+\input{body}
 
-	\clearpage
+\clearpage
 	
 \end{document}

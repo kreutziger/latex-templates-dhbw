@@ -4,10 +4,23 @@
 \usepackage{graphicx} % support for pictures in document
 \usepackage[onehalfspacing]{setspace} % support for changing line spacing within the document
 \usepackage[margin=2.5cm,foot=1cm]{geometry} % set page margins according to DHBW guidelines
-\usepackage{dirtytalk} % support for simple quotes
-\usepackage[hidelinks]{hyperref} % support for links in the TOC
-\usepackage{xurl} % support clickable URLs (with line breaks)
 
-% nicer footnote spacing
-\setlength{\footnotesep}{5mm}
-\setlength{\skip\footins}{5mm}
+% nicer listings
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  frame=single}
+
+% footnote spacing
+\usepackage[perpage,hang]{footmisc}
+\setlength{\skip\footins}{10mm} % space between main text and footnote
+\setlength{\footnotesep}{5mm} % space between footnotes
+\setlength{\footnotemargin}{3mm} % space after footnote number
+
+% paragraph spacing
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{2mm}
+
+\usepackage[hidelinks]{hyperref} % support cross-referencing
+\usepackage{xurl} % support clickable URLs (with line breaks)
