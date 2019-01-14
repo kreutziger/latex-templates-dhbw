@@ -1,5 +1,5 @@
 #!/bin/sh
-xelatex -interaction batchmode document
+xelatex document > /dev/null
 bibtex document
-xelatex -interaction batchmode document
-xelatex -interaction batchmode document
+xelatex document > /dev/null
+texfot xelatex document

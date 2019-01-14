@@ -1,2 +1,2 @@
 #!/bin/sh
-xelatex -interaction batchmode document
+texfot xelatex document
