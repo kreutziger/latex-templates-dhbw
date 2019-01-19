@@ -1,6 +1,6 @@
 #!/bin/sh
-texfot xelatex document
+texfot xelatex -interaction=nonstopmode document
 bibtex document
-xelatex document > /dev/null
-xelatex document > /dev/null
-texfot xelatex document
+xelatex -interaction=nonstopmode document > /dev/null
+xelatex -interaction=nonstopmode document > /dev/null
+texfot xelatex -interaction=nonstopmode document

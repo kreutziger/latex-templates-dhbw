@@ -1,2 +1,2 @@
 #!/bin/sh
-texfot xelatex document
+texfot xelatex -interaction=nonstopmode document
