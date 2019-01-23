@@ -14,7 +14,7 @@ if [ "$2" == "clean" ]; then
     rm -rf out
 fi
 
-if [ ! -f out ]; then
+if [ ! -d out ]; then
     mkdir out
 fi
 
