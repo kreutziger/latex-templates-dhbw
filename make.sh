@@ -1,33 +1,31 @@
 #!/bin/sh
 
 # $1 - template name
-# $2 - content directory (optional)
+# $2 - clean | full | update
 
-cd "$(dirname "$0")"
-
-WRKDIR=`pwd`
-if [ -z "$2" ]; then
-    CONTENTDIR="$WRKDIR/sample-content"
-else
-    CONTENTDIR=$2
-fi
-TEMPLATE=$1
-
+CONTENTDIR=`pwd`
 export TEXINPUTS="$CONTENTDIR:$TEXINPUTS"
 export BIBINPUTS="$CONTENTDIR:$BIBINPUTS"
 
-echo "Content directory: $CONTENTDIR"
+cd "$(dirname "$0")"
+WRKDIR=`pwd`
 
-cd $TEMPLATE
-./make.sh
-if [ -f document.pdf ]; then
-    mv document.pdf "$CONTENTDIR/$TEMPLATE.pdf"
+if [ "$2" == "clean" ]; then
+    rm -rf out
 fi
 
-# cleanup
-rm -f document.aux
-rm -f document.bbl
-rm -f document.blg
-rm -f document.toc
-rm -f document.log
-rm -f document.out
+if [ ! -f out ]; then
+    mkdir out
+fi
+
+if [ "$2" == "clean" ] || [ "$2" == "full" ]; then
+    texfot xelatex -halt-on-error -output-directory out $1
+    if [ $? -ne 0 ]; then
+        exit $?
+    fi
+    bibtex out/$1
+    xelatex -output-directory out $1 > /dev/null
+    xelatex -output-directory out $1 > /dev/null
+fi
+texfot xelatex -output-directory out $1
+cp "out/$1.pdf" "$CONTENTDIR/$1.pdf"
