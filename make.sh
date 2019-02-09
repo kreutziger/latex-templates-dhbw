@@ -28,4 +28,5 @@ if [ "$2" == "clean" ] || [ "$2" == "full" ]; then
     xelatex -output-directory out $1 > /dev/null
 fi
 texfot xelatex -output-directory out $1
+
 cp "out/$1.pdf" "$CONTENTDIR/$1.pdf"
